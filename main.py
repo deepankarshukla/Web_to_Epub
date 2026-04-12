@@ -191,10 +191,10 @@ def create_epub_from_url(base_url, chapter_count, output_file, book_title):
 
 # ================= ENTRY =================
 def main():
-    base_url = "https://freewebnovel.com/novel/keyboard-immortal-novel/chapter-"
-    chapter_count = 2862
-    output_file = "keyboard-immortal.epub"
-    book_title = "Keyboard Immortal"
+    base_url = "https://freewebnovel.com/novel/reverand-insanity/chapter-"
+    chapter_count = 2334
+    output_file = "reverand-insanity.epub"
+    book_title = "reverand-insanity"
 
     create_epub_from_url(base_url, chapter_count, output_file, book_title)
 
