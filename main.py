@@ -1,8 +1,12 @@
 import time
+from enum import verify
+
 from ebooklib import epub
 from bs4 import BeautifulSoup
 import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 MAX_THREADS = 2
@@ -11,8 +15,8 @@ MAX_THREADS = 2
 def fetch_chapter(i, base_url, session):
     try:
         chapter_url = f"{base_url}{i}"
-        response = session.get(chapter_url, timeout=20)
-        time.sleep(2)  # ⏱️ KEEPING SLEEP AS REQUESTED
+        response = session.get(chapter_url, timeout=20, verify=False)
+        time.sleep(5)  # ⏱️ KEEPING SLEEP AS REQUESTED
         response.raise_for_status()
 
         soup = BeautifulSoup(response.content, 'html.parser')
@@ -99,10 +103,10 @@ def create_epub_from_url(base_url, chapter_count, output_file, book_title="E-Boo
 
 
 def main():
-    base_url = "https://freewebnovel.com/novel/reverend-insanity/chapter-"
-    chapter_count = 2334
-    output_file = "reverend-insanity.epub"
-    book_title = "reverend-insanity"
+    base_url = "https://freewebnovel.com/novel/ancient-strengthening-technique/chapter-"
+    chapter_count = 2492
+    output_file = "ancient-strengthening-technique.epub"
+    book_title = "ancient-strengthening-technique"
 
     create_epub_from_url(base_url, chapter_count, output_file, book_title)
 
