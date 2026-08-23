@@ -9,7 +9,7 @@ import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
-MAX_THREADS = 2
+MAX_THREADS = 5
 
 
 def fetch_chapter(i, base_url, session):
@@ -66,7 +66,7 @@ def create_epub_from_url(base_url, chapter_count, output_file, book_title="E-Boo
         with ThreadPoolExecutor(max_workers=MAX_THREADS) as executor:
             futures = [
                 executor.submit(fetch_chapter, i, base_url, session)
-                for i in range(2863, chapter_count + 1)
+                for i in range(1, chapter_count + 1)
             ]
             for future in as_completed(futures):
                 result = future.result()
@@ -102,10 +102,10 @@ def create_epub_from_url(base_url, chapter_count, output_file, book_title="E-Boo
 
 
 def main():
-    base_url = "https://freewebnovel.com/novel/keyboard-immortal-novel/chapter-"
-    chapter_count = 2993
-    output_file = "keyboard-immortal-2815-2945.epub"
-    book_title = "keyboard-immortal-2815-2945"
+    base_url = "https://freewebnovel.com/novel/emperors-domination/chapter-"
+    chapter_count = 7205
+    output_file = "emperors-domination.epub"
+    book_title = "emperors-domination"
 
     create_epub_from_url(base_url, chapter_count, output_file, book_title)
 
