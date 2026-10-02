@@ -15,21 +15,21 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 # CONFIGURATION
 # ============================================================
 
-MAX_THREADS = 10
+MAX_THREADS = 5
 REQUEST_DELAY = 6
 REQUEST_TIMEOUT = 20
 MAX_RETRIES = 3
 
 START_CHAPTER = 1
-END_CHAPTER = 1840
+END_CHAPTER = 2015
 
 BASE_URL = (
-    "https://freewebnovel.com/novel/tales-of-herding-gods/chapter-"
+    "https://freewebnovel.com/novel/urban-romantic-divine-doctor/chapter-"
 )
 
-OUTPUT_FILE = "tale_of_herding_god.epub"
+OUTPUT_FILE = "urban-romantic-divine-doctor.epub"
 
-BOOK_TITLE = "Tales of Herding Gods"
+BOOK_TITLE = "urban-romantic-divine-doctor"
 BOOK_AUTHOR = "Unknown"
 
 # Optional
