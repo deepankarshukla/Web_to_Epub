@@ -21,20 +21,20 @@ REQUEST_TIMEOUT = 20
 MAX_RETRIES = 3
 
 START_CHAPTER = 1
-END_CHAPTER = 2015
+END_CHAPTER = 1771
 
 BASE_URL = (
-    "https://freewebnovel.com/novel/urban-romantic-divine-doctor/chapter-"
+    "https://freewebnovel.com/novel/the-wealthy-tycoons-game-of-life/chapter-"
 )
 
-OUTPUT_FILE = "urban-romantic-divine-doctor.epub"
+OUTPUT_FILE = "the-wealthy-tycoons-game-of-life.epub"
 
-BOOK_TITLE = "urban-romantic-divine-doctor"
+BOOK_TITLE = "the-wealthy-tycoons-game-of-life"
 BOOK_AUTHOR = "Unknown"
 
 # Optional
 BOOK_DESCRIPTION = """
-A complete collection of Tales of Herding Gods chapters,
+A complete collection of the-wealthy-tycoons-game-of-life,
 formatted as a comfortable EPUB reading experience.
 """
 
