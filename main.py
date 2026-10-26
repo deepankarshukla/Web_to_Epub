@@ -21,20 +21,20 @@ REQUEST_TIMEOUT = 20
 MAX_RETRIES = 3
 
 START_CHAPTER = 1
-END_CHAPTER = 1771
+END_CHAPTER = 2255
 
 BASE_URL = (
-    "https://freewebnovel.com/novel/the-wealthy-tycoons-game-of-life/chapter-"
+    "https://freewebnovel.com/novel/martial-world-novel/chapter-"
 )
 
-OUTPUT_FILE = "the-wealthy-tycoons-game-of-life.epub"
+OUTPUT_FILE = "martial-world.epub"
 
-BOOK_TITLE = "the-wealthy-tycoons-game-of-life"
+BOOK_TITLE = "martial-world"
 BOOK_AUTHOR = "Unknown"
 
 # Optional
 BOOK_DESCRIPTION = """
-A complete collection of the-wealthy-tycoons-game-of-life,
+A complete collection of martial-world,
 formatted as a comfortable EPUB reading experience.
 """
 
